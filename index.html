@@ -12,8 +12,17 @@
     <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
     <![endif]-->
-    <script src="js/prefixfree.min.js"></script>
+    <!-- <script src="js/prefixfree.min.js"></script> -->
+    <link rel="stylesheet" href="js/swiper/swiper.min.css">
+    <script src="js/swiper/swiper.min.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="js/progressbar/progressbar.js"></script>
+    <script type="text/javascript" src="js/waypoints.min.js"></script>
+    <link href="js/aos/aos.css" rel="stylesheet">
+    <script src="js/aos/aos.js"></script>
+
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
 </head>
@@ -24,6 +33,7 @@
         <header class="header">
             <div class="container clearfix">
                 <a href="index.html" title="이정음 포트폴리오" class="logo">이정음 포트폴리오</a>
+                <button class="header-menu"><i class="fab fa-buromobelexperte"></i></button>
             </div>
         </header>
         <!-- //상단영역 -->
@@ -36,38 +46,397 @@
                 </div>
                 <div class="gnb">
                     <ul class="depth1">
-                        <li><a href="#">About Me</a></li>
-                        <li><a href="#">Publishing</a></li>
-                        <li><a href="#">Redesign</a></li>
-                        <li><a href="#">Etc.</a></li>
-                        <li><a href="#">Epilogue</a></li>
+                        <li><a href="#profile" class="move">About Me</a></li>
+                        <li><a href="#publishing" class="move">Publishing</a></li>
+                        <li><a href="#redesign" class="move">Redesign</a></li>
+                        <li><a href="#etc" class="move">Etc.</a></li>
+                        <li><a href="#epilogue" class="move">Epilogue</a></li>
                     </ul>
                 </div>
-                <a href="#" class="scrolldown"></a>
+                <a href="#profile" class="scrolldown move"></a>
             </div>
         </div>
         <!-- //Visual -->
         <!-- About Me -->
-        <div class="profile">
+        <div class="profile" id="profile">
             <div class="container clearfix">
                 <h2 class="profile-tit">About Me</h2>
+                <div class="profile-fir clearfix">
+                    <div class="pro-shadow"></div>
+                    <div class="pro-img"><img src="images/profile1.jpg" alt="프로필1"></div>
+                    <div class="pro-name">
+                        <h3 class="pro-subtit">이정음</h3>
+                        <p class="pro-info">
+                            <b>LEE JEONG EUM</b> <br>
+                            _1998.06.23
+                        </p>
+                    </div>
+                    <div class="pro-email">
+                        <h3 class="pro-subtit">e-mail</h3>
+                        <p class="pro-info">
+                            ganada1449@naver.com
+                        </p>
+                    </div>
+                    <button class="pro-bt">
+                        <a href="#">포트폴리오다운로드</a>
+                    </button>
+                </div>
+                <div class="profile-sec">
+                    <div class="pro-edu">
+                        <h3 class="pro-subtit">Education</h3>
+                        <div class="pro-sec-info">
+                            <div class="pro-edu-info pro-edu-info-2 clearfix">
+                                <p>2019</p>
+                                <span>
+                                    수원여자대학교 미용예술과 졸업
+                                </span>
+                            </div>
+                            <div class="pro-edu-info clearfix">
+                                <p>2021</p>
+                                <span>
+                                    그린컴퓨터아트학원 <br>
+                                    대구캠퍼스 반응형 웹디자인(UI/UX) <br>
+                                    & 웹퍼블리셔 디지털 인재양성과정
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pro-car">
+                        <h3 class="pro-subtit">Certificate</h3>
+                        <div class="pro-sec-info">
+                            <div class="pro-car-info clearfix">
+                                <p>2021</p>
+                                <span>
+                                    GTQ그래픽기술자격1급 <br>
+                                    웹디자인기능사(필기) <br>
+                                    운전면허증 2종 보통
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pro-mbti">
+                        <h3 class="pro-subtit">MBTI</h3>
+                        <div class="pro-mbti-box">
+                            <img src="images/mbti_img.png" alt="" class="mbti_img">
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-third clearfix">
+                    <div class="pro-skill">
+                        <h3 class="pro-subtit">Skill</h3>
+                        <ul class="pro-skill-list">
+                            <li>
+                                <span class="skill-cate">Photoshop</span>
+                                <div class="skill-level">
+                                    <div id="skill_photoshop"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-cate">Illustrater</span>
+                                <div class="skill-level">
+                                    <div id="skill_illust"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-cate">HTML</span>
+                                <div class="skill-level">
+                                    <div id="skill_html"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-cate">CSS</span>
+                                <div class="skill-level">
+                                    <div id="skill_css"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-cate">JavaScript</span>
+                                <div class="skill-level">
+                                    <div id="skill_js"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-cate">jQuery</span>
+                                <div class="skill-level">
+                                    <div id="skill_jq"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="slogan"></div>
-        <!-- //About Me -->
-        <!-- Publishing -->
-        <div class="publishing"></div>
-        <!-- //Publishing -->
-        <!-- Redesign -->
-        <div class="redesign"></div>
-        <!-- //Redesign -->
-        <!-- Etc. -->
-        <div class="etc"></div>
-        <!-- //Etc. -->
-        <!-- Epilogue -->
-        <div class="epilogue"></div>
-        <!-- //Epilogue -->
-    </div>
+            <div class="slogan">
+                <div class="container">
+                    <div class="slogan-img">
+                        <img src="images/profile2.jpg" alt="프로필2"  data-aos="fade-up" data-aos-duration="3000" data-aos-delay="300">
+                    </div>
+                    <div class="slogan-txt">
+                        <div class="slogan-txt-tit">
+                            <p>"</p>
+                            <span>한글</span>
+                            <p>"</p>
+                            같은 디자이너 <br>
+                        </div>
+                        <div class="slogan-txt-tit-2 clearfix">
+                            <span class="slogan-name">이정음</span>
+                            <p class="slogan-out">입니다.</p>
+                        </div>
+                        <span class="slogan-txt-tit-img"><img src="images/slogan_sq.png" alt="사각형"></span>
+                        <div class="slogan-txt-box">
+                            모든 소리를 표현해 화자의 <b>개성</b>이 드러나고 <br>
+                            누구나 사용하기 <b>편리</b>하다는 특징이 있는 <b>한글</b>처럼, <br>
+                            <b>이정음</b>이라는 사람의 <b>개성</b>이 드러나면서도 <br>
+                            누구나 사용하기 <b>편리</b>한 홈페이지를 만드는 <b>디자이너</b>입니다. <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //About Me -->
+            <!-- Publishing -->
+            <div class="publishing" id="publishing">
+                <div class="container">
+                    <h2 class="pub-tit">Publishing</h2>
+                    <div class="pub-slide">
+                        <div class="swiper-container sw-pub">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide sw-slide-pu">
+                                    <div class="pub-img">
+                                        <img src="images/p_stx.png" alt="STX건설">
+                                    </div>
+                                    <div class="pub-txt">
+                                        <div class="pub-txt-tit">
+                                            STX건설
+                                        </div>
+                                        <div class="pub-box">
+                                            <b>Program</b> : HTML, CSS, Javascript, Photoshop <br>
+                                            <b>Period</b> : 08. 06 ~ 08. 16 <br>
+                                            <b>Font</b> : Noto Sans KR
+                                        </div>
+                                        <div class="pub-bt">
+                                            <div class="pub-bt-ori">
+                                                <a href="http://www.stxconst.co.kr" target="_blank">Original</a>
+                                            </div>
+                                            <div class="pub-bt-porc">
+                                                <a href="work/stxconst/index.html" target="_blank">Process</a>
+                                            </div>
+                                            <div class="pub-bt-git">
+                                                <a href="https://ganada1449.github.io/stxconst" target="_blank">Github</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide sw-slide-pub">
+                                    <div class="pub-img">
+                                        <img src="images/p_greenjuice.png" alt="풀무원 녹즙">
+                                    </div>
+                                    <div class="pub-txt">
+                                        <div class="pub-txt-tit">
+                                            풀무원 녹즙
+                                        </div>
+                                        <div class="pub-box">
+                                            <b>Program</b> : HTML, CSS, Javascript, Photoshop <br>
+                                            <b>Period</b> : 08. 16 ~ 08. 30 <br>
+                                            <b>Font</b> : Noto Sans KR
+                                        </div>
+                                        <div class="pub-bt">
+                                            <div class="pub-bt-ori">
+                                                <a href="https://greenjuice.pulmuone.com" target="_blank">Original</a>
+                                            </div>
+                                            <div class="pub-bt-porc">
+                                                <a href="work/greenjuice/index.html" target="_blank">Process</a>
+                                            </div>
+                                            <div class="pub-bt-git">
+                                                <a href="https://ganada1449.github.io/greenjuice" target="_blank">Github</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide sw-slide-pub">
+                                    <div class="pub-img">
+                                        <img src="images/p_hansalim.png" alt="한살림 장보기">
+                                    </div>
+                                    <div class="pub-txt">
+                                        <div class="pub-txt-tit">
+                                            한살림 장보기
+                                        </div>
+                                        <div class="pub-box">
+                                            <b>Program</b> : HTML, CSS, Javascript, Photoshop <br>
+                                            <b>Period</b> : 09. 01 ~ 09. 22 <br>
+                                            <b>Font</b> : Noto Sans KR
+                                        </div>
+                                        <div class="pub-bt">
+                                            <div class="pub-bt-ori">
+                                                <a href="https://shop.hansalim.or.kr/shopping/spMain.do" target="_blank">Original</a>
+                                            </div>
+                                            <div class="pub-bt-porc">
+                                                <a href="work/hansalim/index.html" target="_blank">Process</a>
+                                            </div>
+                                            <div class="pub-bt-git">
+                                                <a href="https://ganada1449.github.io/hansalim" target="_blank">Github</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide sw-slide-pub">
+                                    <div class="pub-img">
+                                        <img src="images/p_pulmuonewater.png" alt="풀무원샘물">
+                                    </div>
+                                    <div class="pub-txt">
+                                        <div class="pub-txt-tit">
+                                            풀무원샘물
+                                        </div>
+                                        <div class="pub-box">
+                                            <b>Program</b> : HTML, CSS, Javascript, Photoshop <br>
+                                            <b>Period</b> : 10. 15 ~ 10. 19 <br>
+                                            <b>Font</b> : Noto Sans KR
+                                        </div>
+                                        <div class="pub-bt">
+                                            <div class="pub-bt-ori">
+                                                <a href="https://www.pulmuonewater.com" target="_blank">Original</a>
+                                            </div>
+                                            <div class="pub-bt-porc">
+                                                <a href="work/pulmuonewater/index.html" target="_blank">Process</a>
+                                            </div>
+                                            <div class="pub-bt-git">
+                                                <a href="https://ganada1449.github.io/pulmuonewater" target="_blank">Github</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide sw-slide-pub">
+                                    <div class="pub-img">
+                                        <img src="images/p_nexus.png" alt="넥서스 플래그십">
+                                    </div>
+                                    <div class="pub-txt">
+                                        <div class="pub-txt-tit">
+                                            넥서스 플래그십 서울 갤러리
+                                        </div>
+                                        <div class="pub-box">
+                                            <b>Program</b> : HTML, CSS, Javascript, Photoshop <br>
+                                            <b>Period</b> : 10. 23 ~ 11. 11 <br>
+                                            <b>Font</b> : Noto Sans KR
+                                        </div>
+                                        <div class="pub-bt">
+                                            <div class="pub-bt-ori">
+                                                <a href="https://nexus-official.com" target="_blank">Original</a>
+                                            </div>
+                                            <div class="pub-bt-porc">
+                                                <a href="work/nexus/index.html" target="_blank">Process</a>
+                                            </div>
+                                            <div class="pub-bt-git">
+                                                <a href="https://ganada1449.github.io/nexus" target="_blank">Github</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Publishing -->
+                <!-- Redesign -->
+                <div class="redesign" id="redesign">
+                    <div class="container">
+                        <h2 class="red-tit">Redesign</h2>
+                        <div class="red-slide">
+                            <div class="swiper-container sw-red">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide sw-slide-re">
+                                        <div class="sw-red-box">
+                                            <div class="red-img">
+                                                <img src="images/r_lg_2.png" alt="LG생활건강">
+                                                <img src="images/r_lg.png" alt="" class="big-red">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide red-slide">
+                                        <div class="sw-red-box">
+                                            <div class="red-img">
+                                                <img src="images/r_baskinrobbinson_2.png" alt="배스킨라빈스">
+                                                <img src="images/r_baskinrobbinson.png" alt="" class="big-red">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide red-slide">
+                                        <div class="sw-red-box">
+                                            <div class="red-img">
+                                                <img src="images/r_hm_2.png" alt="H&M">
+                                                <img src="images/r_hm.png" alt="" class="big-red">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="red-info ">
+                            <div class="red-txt-top clearfix">
+                                <div class="red-txt">
+                                    <div class="red-txt-tit">
+                                        LG생활건강
+                                    </div>
+                                    <div class="red-txt-box">
+                                        <span class="red-txt-box-date">10. 23 ~ 11. 01</span> <br>
+                                        <span class="red-txt-box-work">Font : Noto Sans KR</span>
+                                    </div>
+                                </div>
+                                <div class="red-icon clearfix">
+                                    <span class="red-icon-ps">포토샵</span>
+                                    <span class="red-icon-ai">일러스트</span>
+                                </div>
+                            </div>
+                            <div class="red-txt-bottom">
+                                <a href="https://www.lghnh.com:984/index.jsp" target="_blank">Original</a>
+                                <a href="#">Process</a>
+                                <a href="work/lg/index.html" target="_blank">Redesign</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Redesign -->
+                <!-- Etc. -->
+                <div class="etc" id="etc">
+                    <div class="container">
+                        <h2 class="etc-tit">Etc.</h2>
+                    </div>
+                </div>
+                <!-- //Etc. -->
+                <!-- Epilogue -->
+                <div class="epilogue" id="epilogue">
+                    <div class="container">
+                        <h2 class="epi-tit">Epilogue</h2>
+                        <div class="epi-img clearfix">
+                            <div class="epi-img-tra">
+                                <img src="images/epilogue_travel_img.png" alt="여행">
+                            </div>
+                            <div class="epi-img-con">
+                                <img src="images/epilogue_concert_img.png" alt="공연">
+                            </div>
+                            <div class="epi-img-exhi">
+                                <img src="images/epilogue_exhibition_img.png" alt="전시회">
+                            </div>
+                        </div>
+                        <div class="epi-txt">
+                            <div class="epi-txt-tit">
+                                Epilogue
+                            </div>
+                            <div class="epi-txt-box">
+                                새로운 것을 경험하고 좋아하는 일에 열정을 <br>
+                                쏟는 것을 좋아합니다. <br>
+                                또한, 작은 목표라도 계획을 세워 하나씩 <br>
+                                이루어 나가는 것에 뿌듯함을 느낍니다. <br>
+                                이러한 저의 성격을 추진력 삼아 <br>
+                                조금만 밀어줘도 앞으로 계속 굴러가는 <br>
+                                제 로고 속 원처럼 꾸준히 앞으로 나아가는 <br>
+                                사람이 되겠습니다.
+                            </div>
+                        </div>
+                        <button class="epi-bt">
+                            <a href="#">포트폴리오다운로드</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- //Epilogue -->
+            </div>
 </body>
 
 </html>
