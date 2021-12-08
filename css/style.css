@@ -25,17 +25,23 @@ li {
 
 /* SCROLL */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 1.2rem;
 }
 
 /* 스크롤바의 width */
 ::-webkit-scrollbar-track {
+    width: 1.1rem;
     background-color: #fffbf7;
 }
 
 /* 스크롤바의 전체 배경색 */
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, #ffc279, #ffc279);
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #599e75, #599e75);
 }
 
 /* 스크롤바 색 */
@@ -68,6 +74,28 @@ body {
     clear: both;
 }
 
+.gotop {
+    position: fixed;
+    left: calc(60% + 57.1rem);
+    bottom: 6rem;
+    width: 4.4rem;
+    height: 6.5rem;
+    font-size: 0rem;
+    border: 0;
+    background: url('../images/gotop.png') no-repeat center;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.gotop:hover {
+    /* background-color: red; */
+}
+
+.wrap {
+    position: relative;
+    display: block;
+}
+
 /* 상단 영역 */
 .header {
     position: fixed;
@@ -96,7 +124,7 @@ body {
     padding-right: 2.8rem;
 }
 
-.header-menu {
+.header-menu-icon {
     position: absolute;
     right: -17rem;
     top: 1rem;
@@ -108,8 +136,67 @@ body {
     cursor: pointer;
 }
 
-.header-menu:hover {
+.header-menu-icon:hover {
     color: #fab66a;
+}
+
+.header-menu {
+    position: fixed;
+    right: 14.3rem;
+    top: 7.5rem;
+    height: 60%;
+    background-color: rgba(125, 125, 125, 0.3);
+    box-shadow: 0 0.2rem 0.6rem 0 rgb(0 0 0 / 25%);
+    transition: left 0.5s;
+    z-index: 9999;
+}
+
+.header-menu-active {
+    left: 0;
+}
+
+.header-close {
+    display: block;
+    border: none;
+    background-color: unset;
+    margin: 1rem;
+    margin-top: 1.5rem;
+    margin-left: 22rem;
+    cursor: pointer;
+}
+
+.header-close:hover {
+    color: #faad58;
+}
+
+.header-gnb {
+    width: 25rem;
+}
+
+.header-gnb li {
+    border: 0.1rem solid rgba(128, 128, 128, 0.2);
+}
+
+.header-gnb a {
+    display: block;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.12rem;
+    line-height: 6rem;
+    color: #717171;
+    padding-left: 1rem;
+}
+
+.header-gnb a:hover {
+    color: #fff;
+    background-color: rgba(125, 125, 125, 0.4);
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+.header-gnb>li:last-child {
+    border-bottom: 0;
 }
 
 /* Visual */
@@ -370,7 +457,7 @@ body {
 .pro-mbti {
     position: relative;
     display: block;
-    padding-top: 4rem;
+    padding-top: 3.5rem;
 }
 
 .pro-mbti-box {
@@ -391,16 +478,65 @@ body {
 }
 
 .mbti_img_focus {
-    transform: translate(-49%, -40%) scale(1.0);
+    transform: translate(-50%, -41%) scale(1.0);
     opacity: 1;
+}
+
+.pro-mbti-txt {
+    position: relative;
+    display: block;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: -21rem;
+    margin-left: 39.5rem;
+}
+
+.pro-mbti-txt-tit {
+    position: relative;
+    display: block;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+    color: #faad58;
+}
+
+.pro-mbti-txt-subtit {
+    font-size: 2.2rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    color: #7f7e7e;
+}
+
+.pro-mbti-txt-subtit-2 {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: #7f7e7e;
+    padding-top: 1.4rem;
+    padding-bottom: 2rem;
+}
+
+.pro-mbti-txt-subtit-2 b {
+    color: #faad58;
+}
+
+.pro-mbti-txt-tag {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    line-height: 3.7rem;
+    color: #7f7e7e;
+}
+
+.pro-mbti-txt-tag span {
+    color: #52966e;
 }
 
 .profile-third {
     position: relative;
     display: block;
     float: left;
-    padding-top: 22rem;
-    padding-left: 6rem;
+    margin-top: -71.9rem;
+    padding-left: 69rem;
 }
 
 .pro-skill {
@@ -448,7 +584,6 @@ body {
     position: relative;
     display: block;
 }
-
 
 #skill_photoshop,
 #skill_illust,
@@ -759,10 +894,6 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.red-img img {
-    /*width: 100%;*/
-}
-
 .big-red {
     position: absolute;
     left: 50%;
@@ -778,6 +909,9 @@ body {
 .red-txt-top {
     position: relative;
     display: block;
+    padding-top: 6.5rem;
+    padding-bottom: 23px;
+    margin-left: 34.7rem;
 }
 
 .red-txt {
@@ -791,6 +925,8 @@ body {
     font-size: 4rem;
     font-weight: 600;
     color: #f9a647;
+    padding-top: 0.95rem;
+    margin-right: 3rem;
 }
 
 .red-txt-box {
@@ -799,14 +935,17 @@ body {
     font-weight: 500;
     line-height: 3.2rem;
     color: #717171;
+    margin-right: 3rem;
 }
 
 .red-icon {
     position: relative;
-    float: right;
+    float: left;
+    padding-top: 2.24rem;
 }
 
 .red-icon-ps {
+    float: left;
     width: 3.8rem;
     height: 3.8rem;
     font-size: 0rem;
@@ -839,12 +978,10 @@ body {
 
 .red-txt-bottom a:nth-child(1) {
     background: url('../images/work_original.png') no-repeat center;
-
 }
 
 .red-txt-bottom a:nth-child(1):hover {
     background: url('../images/redesign_bt_o.png') no-repeat center;
-
 }
 
 .red-txt-bottom a:nth-child(2) {

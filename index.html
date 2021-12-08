@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="images/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="images/mobile_web_icon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <title>이정음 포트폴리오</title>
     <script src="js/jquery.min.js"></script>
     <!--[if lt IE 9]>
@@ -16,7 +17,8 @@
     <link rel="stylesheet" href="js/swiper/swiper.min.css">
     <script src="js/swiper/swiper.min.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script type="text/javascript" src="js/progressbar/progressbar.js"></script>
     <script type="text/javascript" src="js/waypoints.min.js"></script>
@@ -28,12 +30,23 @@
 </head>
 
 <body>
-    <div class="wrap">
+    <a href="#" class="gotop"></a>
+    <div class="wrap" id="home">
         <!-- 상단영역 -->
         <header class="header">
             <div class="container clearfix">
                 <a href="index.html" title="이정음 포트폴리오" class="logo">이정음 포트폴리오</a>
-                <button class="header-menu"><i class="fab fa-buromobelexperte"></i></button>
+                <button class="header-menu-icon"><i class="fab fa-buromobelexperte"></i></button>
+                <div class="header-menu">
+                    <button class="header-close"><i class="fas fa-times"></i></button>
+                    <ul class="header-gnb">
+                        <li><a href="#profile" class="move">About Me</a></li>
+                        <li><a href="#publishing" class="move">Publishing</a></li>
+                        <li><a href="#redesign" class="move">Redesign</a></li>
+                        <li><a href="#etc" class="move">Etc.</a></li>
+                        <li><a href="#epilogue" class="move">Epilogue</a></li>
+                    </ul>
+                </div>
             </div>
         </header>
         <!-- //상단영역 -->
@@ -119,6 +132,21 @@
                         <div class="pro-mbti-box">
                             <img src="images/mbti_img.png" alt="" class="mbti_img">
                         </div>
+                        <div class="pro-mbti-txt">
+                            <div class="pro-mbti-txt-tit">INFJ-T</div>
+                            <div class="pro-mbti-txt-subtit">- 선의의 옹호자</div>
+                            <div class="pro-mbti-txt-subtit-2">
+                                <b>I</b>(67%)
+                                <b>N</b>(66%)
+                                <b>F</b>(54%)
+                                <b>J</b>(69%)
+                                <b>T</b>(67%)
+                            </div>
+                            <div class="pro-mbti-txt-tag clearfix">
+                                <span>#책임감 강함</span> #배려심 깊음 #독창성 <br>
+                                <span>#계획적</span> #이지적 <span>#통찰력</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="profile-third clearfix">
@@ -168,7 +196,8 @@
             <div class="slogan">
                 <div class="container">
                     <div class="slogan-img">
-                        <img src="images/profile2.jpg" alt="프로필2"  data-aos="fade-up" data-aos-duration="3000" data-aos-delay="300">
+                        <img src="images/profile2.jpg" alt="프로필2" data-aos="fade-up" data-aos-duration="3000"
+                            data-aos-delay="300">
                     </div>
                     <div class="slogan-txt">
                         <div class="slogan-txt-tit">
@@ -220,7 +249,8 @@
                                                 <a href="work/stxconst/index.html" target="_blank">Process</a>
                                             </div>
                                             <div class="pub-bt-git">
-                                                <a href="https://ganada1449.github.io/stxconst" target="_blank">Github</a>
+                                                <a href="https://ganada1449.github.io/stxconst"
+                                                    target="_blank">Github</a>
                                             </div>
                                         </div>
                                     </div>
@@ -246,7 +276,8 @@
                                                 <a href="work/greenjuice/index.html" target="_blank">Process</a>
                                             </div>
                                             <div class="pub-bt-git">
-                                                <a href="https://ganada1449.github.io/greenjuice" target="_blank">Github</a>
+                                                <a href="https://ganada1449.github.io/greenjuice"
+                                                    target="_blank">Github</a>
                                             </div>
                                         </div>
                                     </div>
@@ -266,13 +297,15 @@
                                         </div>
                                         <div class="pub-bt">
                                             <div class="pub-bt-ori">
-                                                <a href="https://shop.hansalim.or.kr/shopping/spMain.do" target="_blank">Original</a>
+                                                <a href="https://shop.hansalim.or.kr/shopping/spMain.do"
+                                                    target="_blank">Original</a>
                                             </div>
                                             <div class="pub-bt-porc">
                                                 <a href="work/hansalim/index.html" target="_blank">Process</a>
                                             </div>
                                             <div class="pub-bt-git">
-                                                <a href="https://ganada1449.github.io/hansalim" target="_blank">Github</a>
+                                                <a href="https://ganada1449.github.io/hansalim"
+                                                    target="_blank">Github</a>
                                             </div>
                                         </div>
                                     </div>
@@ -298,7 +331,8 @@
                                                 <a href="work/pulmuonewater/index.html" target="_blank">Process</a>
                                             </div>
                                             <div class="pub-bt-git">
-                                                <a href="https://ganada1449.github.io/pulmuonewater" target="_blank">Github</a>
+                                                <a href="https://ganada1449.github.io/pulmuonewater"
+                                                    target="_blank">Github</a>
                                             </div>
                                         </div>
                                     </div>

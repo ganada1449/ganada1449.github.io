@@ -3,6 +3,13 @@ window.onload = function () {
 }
 
 $(document).ready(function () {
+
+    $('.gotop').click(function () {
+        $('html, body').animate({
+            scrollTop: 0
+        });
+    });
+
     // 부드럽게 위치 이동하는 코드
     var moveEl = $('.move');
     // 클릭시 해당위치로 부드럽게 이동한다.
@@ -26,6 +33,7 @@ $(document).ready(function () {
             }, 500);
         });
     });
+
     new Swiper('.sw-pub', {
         slidesPerView: 1,
         spaceBetween: 400,
@@ -53,17 +61,17 @@ $(document).ready(function () {
     var red_tit = [{
             title: 'LG생활건강',
             date: '10. 23 ~ 11. 01',
-            work: 'Font : Noto Sans KR'
+            work: 'Font : Noto Sans KR',
         },
         {
-            title: '베스킨라빈슨',
-            date: '10. 23 ~ 11. 01',
-            work: 'Font : Noto Sans KR'
+            title: '베스킨라빈스',
+            date: '11. 20 ~ 11. 27',
+            work: 'Font : Noto Sans KR',
         },
         {
             title: 'H&M',
             date: '10. 23 ~ 11. 01',
-            work: 'Font : Noto Sans KR'
+            work: 'Font : Noto Sans KR',
         }
 
     ]
