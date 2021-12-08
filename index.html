@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script type="text/javascript" src="js/progressbar/progressbar.js"></script>
     <script type="text/javascript" src="js/waypoints.min.js"></script>
@@ -364,9 +365,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
+                            <div class="swiper-pagination sw-pub-pg"></div>
                         </div>
                     </div>
                 </div>
@@ -403,6 +402,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="swiper-pagination sw-red-pg"></div>
                             </div>
                         </div>
                         <div class="red-info ">
@@ -428,52 +428,87 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- //Redesign -->
-                <!-- Etc. -->
-                <div class="etc" id="etc">
-                    <div class="container">
-                        <h2 class="etc-tit">Etc.</h2>
-                    </div>
-                </div>
-                <!-- //Etc. -->
-                <!-- Epilogue -->
-                <div class="epilogue" id="epilogue">
-                    <div class="container">
-                        <h2 class="epi-tit">Epilogue</h2>
-                        <div class="epi-img clearfix">
-                            <div class="epi-img-tra">
-                                <img src="images/epilogue_travel_img.png" alt="여행">
-                            </div>
-                            <div class="epi-img-con">
-                                <img src="images/epilogue_concert_img.png" alt="공연">
-                            </div>
-                            <div class="epi-img-exhi">
-                                <img src="images/epilogue_exhibition_img.png" alt="전시회">
+                    <!-- //Redesign -->
+                    <!-- Etc. -->
+                    <div class="etc" id="etc">
+                        <div class="container">
+                            <h2 class="etc-tit">Etc.</h2>
+                            <div class="etc-wrap clearfix">
+                                <ul class="etc-work">
+                                    <li>
+                                        <a href="work/etc_baskinrobbinson/br_logo_process.png" target="_blank">
+                                            <img src="images/etc_1.png" alt="로고 디자인1">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="work/etc_baskinrobbinson/br_logo_process.png" target="_blank">
+                                            <img src="images/etc_1.png" alt="로고 디자인1">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="work/etc_baskinrobbinson/br_logo_process.png" target="_blank">
+                                            <img src="images/etc_1.png" alt="로고 디자인1">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="etc-work-2">
+                                    <li>
+                                        <a href="work/etc_dalkomm/dk_process.png" target="_blank">
+                                            <img src="images/etc_2.png" alt="로고 디자인2">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="work/etc_dalkomm/dk_process.png" target="_blank">
+                                            <img src="images/etc_2.png" alt="로고 디자인2">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="work/etc_dalkomm/dk_process.png" target="_blank">
+                                            <img src="images/etc_2.png" alt="로고 디자인2">
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="epi-txt">
-                            <div class="epi-txt-tit">
-                                Epilogue
-                            </div>
-                            <div class="epi-txt-box">
-                                새로운 것을 경험하고 좋아하는 일에 열정을 <br>
-                                쏟는 것을 좋아합니다. <br>
-                                또한, 작은 목표라도 계획을 세워 하나씩 <br>
-                                이루어 나가는 것에 뿌듯함을 느낍니다. <br>
-                                이러한 저의 성격을 추진력 삼아 <br>
-                                조금만 밀어줘도 앞으로 계속 굴러가는 <br>
-                                제 로고 속 원처럼 꾸준히 앞으로 나아가는 <br>
-                                사람이 되겠습니다.
-                            </div>
-                        </div>
-                        <button class="epi-bt">
-                            <a href="#">포트폴리오다운로드</a>
-                        </button>
                     </div>
+                    <!-- //Etc. -->
+                    <!-- Epilogue -->
+                    <div class="epilogue" id="epilogue">
+                        <div class="container">
+                            <h2 class="epi-tit">Epilogue</h2>
+                            <div class="epi-img clearfix">
+                                <div class="epi-img-tra">
+                                    <img src="images/epilogue_travel_img.png" alt="여행">
+                                </div>
+                                <div class="epi-img-con">
+                                    <img src="images/epilogue_concert_img.png" alt="공연">
+                                </div>
+                                <div class="epi-img-exhi">
+                                    <img src="images/epilogue_exhibition_img.png" alt="전시회">
+                                </div>
+                            </div>
+                            <div class="epi-txt">
+                                <div class="epi-txt-tit">
+                                    Epilogue
+                                </div>
+                                <div class="epi-txt-box">
+                                    새로운 것을 경험하고 좋아하는 일에 열정을 <br>
+                                    쏟는 것을 좋아합니다. <br>
+                                    또한, 작은 목표라도 계획을 세워 하나씩 <br>
+                                    이루어 나가는 것에 뿌듯함을 느낍니다. <br>
+                                    이러한 저의 성격을 추진력 삼아 <br>
+                                    조금만 밀어줘도 앞으로 계속 굴러가는 <br>
+                                    제 로고 속 원처럼 꾸준히 앞으로 나아가는 <br>
+                                    사람이 되겠습니다.
+                                </div>
+                            </div>
+                            <button class="epi-bt">
+                                <a href="#">포트폴리오다운로드</a>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- //Epilogue -->
                 </div>
-                <!-- //Epilogue -->
-            </div>
 </body>
 
 </html>
