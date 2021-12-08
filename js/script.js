@@ -4,11 +4,36 @@ window.onload = function () {
 
 $(document).ready(function () {
 
+    $(window).scroll(function () {
+        var scY = $(window).scrollTop();
+
+        if (scY >= 350) {
+            $('.gotop').addClass('gotop-active');
+        } else {
+            $('.gotop').removeClass('gotop-active');
+        }
+
+    });
+
     $('.gotop').click(function () {
         $('html, body').animate({
             scrollTop: 0
         });
     });
+
+    $(".header-menu-icon").click(function () {
+        if ($(".header-menu").is(":visible")) {
+            $(".header-menu").slideUp();
+        } else {
+            $(".header-menu").slideDown();
+        }
+    })
+
+    $(".header-close").click(function () {
+        if ($(".header-menu").is(":visible")) {
+            $(".header-menu").slideUp();
+        }
+    })
 
     // 부드럽게 위치 이동하는 코드
     var moveEl = $('.move');
@@ -39,26 +64,24 @@ $(document).ready(function () {
         spaceBetween: 400,
         loop: true,
         pagination: {
-            el: '.swiper-pagination',
+            el: '.sw-pub-pg',
             clickable: true,
         },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
         },
-        // autoplay: {
-        //     delay: 2500,
-        //     disableOnInteraction: false,
-        // },
     });
-
 
     var sw_red = new Swiper('.sw-red', {
         slidesPerView: 3,
-        // slidesPerGroup: 3,
         spaceBetween: 30,
         loop: true,
         centeredSlides: true,
+        pagination: {
+            el: '.sw-red-pg',
+            clickable: true,
+        },
 
         // autoplay: {
         //     delay: 2500,
@@ -112,19 +135,20 @@ $(document).ready(function () {
     var photoshop = new ProgressBar.Line(skill_photoshop, {
         strokeWidth: 1,
         easing: 'easeInOut',
-        duration: 1400,
+        duration: 1200,
         color: '#ffc279',
         trailColor: '#ececec',
         trailWidth: 1,
         svgStyle: {
             width: '100%',
             height: '100%'
-        }
+        },
     });
+
     var illust = new ProgressBar.Line(skill_illust, {
         strokeWidth: 1,
         easing: 'easeInOut',
-        duration: 1400,
+        duration: 1200,
         color: '#ffc279',
         trailColor: '#ececec',
         trailWidth: 1,
@@ -133,10 +157,11 @@ $(document).ready(function () {
             height: '100%'
         }
     });
+
     var html = new ProgressBar.Line(skill_html, {
         strokeWidth: 1,
         easing: 'easeInOut',
-        duration: 1400,
+        duration: 1200,
         color: '#ffc279',
         trailColor: '#ececec',
         trailWidth: 1,
@@ -145,10 +170,11 @@ $(document).ready(function () {
             height: '100%'
         }
     });
+
     var css = new ProgressBar.Line(skill_css, {
         strokeWidth: 1,
         easing: 'easeInOut',
-        duration: 1400,
+        duration: 1200,
         color: '#ffc279',
         trailColor: '#ececec',
         trailWidth: 1,
@@ -157,10 +183,11 @@ $(document).ready(function () {
             height: '100%'
         }
     });
+
     var js = new ProgressBar.Line(skill_js, {
         strokeWidth: 1,
         easing: 'easeInOut',
-        duration: 1400,
+        duration: 1200,
         color: '#ffc279',
         trailColor: '#ececec',
         trailWidth: 1,
@@ -169,10 +196,11 @@ $(document).ready(function () {
             height: '100%'
         }
     });
+
     var jq = new ProgressBar.Line(skill_jq, {
         strokeWidth: 1,
         easing: 'easeInOut',
-        duration: 1400,
+        duration: 1200,
         color: '#ffc279',
         trailColor: '#ececec',
         trailWidth: 1,
@@ -187,7 +215,7 @@ $(document).ready(function () {
         var scY = $(window).scrollTop();
         // console.log(scY)
 
-        if (scY > 800) {
+        if (scY > 300) {
             photoshop.animate(1.0);
             illust.animate(1.0);
             html.animate(1.0);
@@ -197,7 +225,6 @@ $(document).ready(function () {
         }
     });
 
-
     $('.mbti_img').waypoint(function (dir) {
         if (dir == "down") {
             $('.mbti_img').addClass('mbti_img_focus');
@@ -205,9 +232,8 @@ $(document).ready(function () {
             // $('.mbti_img').removeClass('mbti_img_focus');
         }
     }, {
-        offset: '70%'
+        offset: '90%'
     });
-
 
     $('.slogan-name').waypoint(function (dir) {
         if (dir == "down") {
@@ -219,6 +245,27 @@ $(document).ready(function () {
         offset: '70%'
     });
 
+    $('.epi-img-tra').waypoint(function (dir) {
+        if (dir == "down") {
+            $('.epi-img-tra').addClass('epi-img-tra-active');
+        }
+    }, {
+        offset: '100%'
+    });
 
+    $('.epi-img-con').waypoint(function (dir) {
+        if (dir == "down") {
+            $('.epi-img-con').addClass('epi-img-con-active');
+        }
+    }, {
+        offset: '50%'
+    });
 
+    $('.epi-img-exhi').waypoint(function (dir) {
+        if (dir == "down") {
+            $('.epi-img-exhi').addClass('epi-img-exhi-active');
+        }
+    }, {
+        offset: '100%'
+    });
 });
