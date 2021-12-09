@@ -83,26 +83,42 @@ $(document).ready(function () {
             clickable: true,
         },
 
-        // autoplay: {
-        //     delay: 2500,
-        //     disableOnInteraction: false,
-        // },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
     });
+
+    $('.sw-red').mouseenter(function () {
+        // sw_red.autoplay.stop();
+    })
+    $('.sw-red').mouseleave(function () {
+        // sw_red.autplay.start();
+    })
 
     var red_tit = [{
             title: 'LG생활건강',
             date: '10. 23 ~ 11. 01',
             work: 'Font : Noto Sans KR',
+            ori: 'https://www.lghnh.com:984/index.jsp',
+            pro: 'https://ganada1449.github.io/work/lg/index.html',
+            job: 'https://ganada1449.github.io/work/lg/index.html',
         },
         {
             title: '베스킨라빈스',
             date: '11. 20 ~ 11. 27',
             work: 'Font : Noto Sans KR',
+            ori: 'http://www.baskinrobbins.co.kr/',
+            pro: 'https://ganada1449.github.io/work/baskinrobbinson/index_process.html',
+            job: 'https://ganada1449.github.io/work/baskinrobbinson/index.html',
         },
         {
             title: 'H&M',
             date: '10. 23 ~ 11. 01',
             work: 'Font : Noto Sans KR',
+            ori: 'https://www2.hm.com/ko_kr/index.html',
+            pro: 'https://ganada1449.github.io/work/hm/index.html',
+            job: 'https://ganada1449.github.io/work/hm/index.html',
         }
 
     ]
@@ -110,11 +126,19 @@ $(document).ready(function () {
     var red_txt_box_date = $('.red-txt-box-date')
     var red_txt_box_work = $('.red-txt-box-work')
 
+    var red_txt_box_ori = $('.ori_link')
+    var red_txt_box_pro = $('.pro_link')
+    var red_txt_box_job = $('.work_link')
+
+
     function changeTxt(_index) {
         var temp = red_tit[_index];
         red_txt_tit.text(temp.title);
         red_txt_box_date.text(temp.date);
         red_txt_box_work.text(temp.work);
+        red_txt_box_ori.attr('href', temp.ori)
+        red_txt_box_pro.attr('href', temp.pro)
+        red_txt_box_job.attr('href', temp.job)
     }
 
     changeTxt(0)
@@ -125,10 +149,8 @@ $(document).ready(function () {
 
     sw_red.on('slideChange', function () {
         big_red.hide();
-        big_red.eq(sw_red.realIndex).show();
-
+        big_red.eq(sw_red.activeIndex).show();
         changeTxt(sw_red.realIndex)
-
     });
 
     // photoshop 성취율
@@ -142,7 +164,7 @@ $(document).ready(function () {
         svgStyle: {
             width: '100%',
             height: '100%'
-        },
+        }
     });
 
     var illust = new ProgressBar.Line(skill_illust, {
@@ -216,12 +238,12 @@ $(document).ready(function () {
         // console.log(scY)
 
         if (scY > 300) {
-            photoshop.animate(1.0);
-            illust.animate(1.0);
-            html.animate(1.0);
-            css.animate(1.0);
-            js.animate(1.0);
-            jq.animate(1.0);
+            photoshop.animate(0.8);
+            illust.animate(0.75);
+            html.animate(0.8);
+            css.animate(0.75);
+            js.animate(0.7);
+            jq.animate(0.7);
         }
     });
 
@@ -267,5 +289,11 @@ $(document).ready(function () {
         }
     }, {
         offset: '100%'
+    });
+
+    $(".etc-sample").niceScroll({
+        cursorwidth: "20px",
+        cursoropacitymax: 0.5,
+        boxzoom: true,
     });
 });
