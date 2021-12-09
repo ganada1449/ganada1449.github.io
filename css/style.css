@@ -614,11 +614,36 @@ body {
     display: block;
 }
 
-#skill_photoshop,
-#skill_illust,
-#skill_html,
-#skill_css,
-#skill_js,
+#skill_photoshop {
+    position: relative;
+    width: 100%;
+    height: 10px;
+}
+
+#skill_illust {
+    position: relative;
+    width: 100%;
+    height: 10px;
+}
+
+#skill_html {
+    position: relative;
+    width: 100%;
+    height: 10px;
+}
+
+#skill_css {
+    position: relative;
+    width: 100%;
+    height: 10px;
+}
+
+#skill_js {
+    position: relative;
+    width: 100%;
+    height: 10px;
+}
+
 #skill_jq {
     position: relative;
     width: 100%;
@@ -956,23 +981,25 @@ body {
 }
 
 .sw-red-pg {
-    bottom: 0px;
-    left: 0px;
+    bottom: -260px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .sw-red-pg .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
     background: transparent;
-    border: 1px solid #f9a647;
+    border: 1px solid #599e75;
     opacity: 1;
+    margin: 0 5px;
 }
 
 .sw-red-pg .swiper-pagination-bullet-active {
     width: 40px;
     transition: width .5s;
     border-radius: 5px;
-    background: #f9a647;
+    background: #599e75;
     border: 1px solid transparent;
 }
 
@@ -1153,6 +1180,15 @@ body {
 }
 
 .etc-work li>a {}
+
+.etc-br {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
+}
 
 .etc-work-2 {
     position: relative;
