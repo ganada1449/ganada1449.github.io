@@ -107,18 +107,18 @@ $(document).ready(function () {
         {
             title: '베스킨라빈스',
             date: '11. 20 ~ 11. 27',
-            work: 'Font : Noto Sans KR, Nnum Gothic',
+            work: 'Font : Nanum Gothic',
             ori: 'http://www.baskinrobbins.co.kr/',
             pro: 'https://ganada1449.github.io/work/baskinrobbinson/index_process.html',
             job: 'https://ganada1449.github.io/work/baskinrobbinson/index.html',
         },
         {
             title: 'H&M',
-            date: 'Comming soon',
-            work: 'Font : Noto Sans KR',
+            date: '12.08 ~ 12.10',
+            work: 'Font : Nanum Gothic, Roboto',
             ori: 'https://www2.hm.com/ko_kr/index.html',
-            pro: '',
-            job: '',
+            pro: 'https://ganada1449.github.io/work/hm/index_process.html',
+            job: 'https://ganada1449.github.io/work/hm/index.html',
         }
 
     ]
