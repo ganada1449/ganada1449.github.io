@@ -400,7 +400,7 @@ body {
     padding-top: 4.7rem;
 }
 
-.pro-bt {
+.pro-bt a {
     position: absolute;
     left: 0rem;
     bottom: 0rem;
@@ -413,7 +413,7 @@ body {
     cursor: pointer;
 }
 
-.pro-bt:hover {
+.pro-bt a:hover {
     background: url('../images/portfolio_bt_o.png') no-repeat center;
 }
 
@@ -1322,7 +1322,7 @@ body {
     padding-top: 2.5rem;
 }
 
-.epi-bt {
+.epi-bt a {
     position: absolute;
     right: 9rem;
     top: 55.5rem;
@@ -1335,6 +1335,6 @@ body {
     cursor: pointer;
 }
 
-.epi-bt:hover {
+.epi-bt a:hover {
     background: url('../images/portfolio_download_2.png') no-repeat center;
 }
